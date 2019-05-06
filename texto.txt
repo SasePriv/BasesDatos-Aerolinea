@@ -1,8 +1,0 @@
-<div id="body">
-    <div id="texto-contenedor">
-        <p id="texto-contenedor">hola como esta esto es un texto de ejemplo para el navegador pero no importa pero estamos aqui probando mi codigo de pruba a ver que pasa</p>
-    </div>
-
-    <div id="imagen-contenedor">
-    </div>
-</div>
