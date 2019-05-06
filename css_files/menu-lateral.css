@@ -1,0 +1,136 @@
+@import url(http://fonts.googleapis.com/css?family=Exo:100,200,400);
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:700,400,300);
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: verdana;
+    color: #bcbcbc;
+}
+
+/* Menu*/
+
+div#menu{
+  position: absolute;
+    width: 90px;
+    height: 100%;
+    background-color: #2f3030;
+    overflow: hidden;
+    -webkit-transition: width 0.4s;
+}
+
+div#menu:hover{
+    width: 200px;
+}
+
+div#logo-principal{
+    width: 70px;
+    height: 70px;
+    /*margin: 10px;*/
+    background-image: url("../imagenes/icon-aero.png");
+    background-size: cover;
+    float: left;
+
+}
+
+h1.titulo-logo{
+    font-size: 1em;
+    margin-left: 90px;
+    font-family: 'Exo', sans-serif;
+    font-weight: 600;
+}
+
+h1#titulo-logo-primero{
+    line-height: 35px;
+}
+
+h1#argenti{
+    color: #2168A6 !important;
+    font-weight: 600 !important;
+}
+
+div#contenedor-logo{
+    width: 180px;
+    height: 90px;
+    margin-left: 10px;
+    margin-top: 20px;
+    /*background-color: red;*/
+}
+
+div.contenedor-general{
+    width: 100%;
+    height: 90px;
+    padding-left: 10px;
+    margin-top: 20px;
+    /*background-color: red;*/
+    -webkit-transition: width 0.4s;
+    cursor: pointer;
+}
+
+div.contenedor-general:hover{
+    background-color: rgba(140, 140, 140, 0.2);
+}
+
+div#contenedor-general-primero{
+    margin-top: 70px;
+}
+
+div.logo-interior{
+    width: 70px;
+    height: 70px;
+    background-image: url("../imagenes/icon.png");
+    background-size: cover;
+    float: left;
+    margin-top: 5px;
+}
+
+div#logo-inicio{
+    background-image: url("../imagenes/home.png") !important;
+}
+
+div#logo-buscar{
+    background-image: url("../imagenes/buscar.png") !important;
+}
+
+div#logo-vuelos{
+    background-image: url("../imagenes/vuelos.png") !important;
+}
+
+p.texto{
+    margin-left: 95px;
+    line-height: 75px;
+    font-family: 'Exo', sans-serif;
+    font-weight: 600;
+}
+
+/*Body*/
+
+/*
+div#body{
+    position: absolute;
+    right: 0px;
+    left: 190px;
+    min-height: 300px;
+    background-color: red;
+}
+
+div#texto-contenedor{
+    width: 50%;
+    min-height: 300px;
+    background-color: grey;
+    float: left;
+}
+
+p#texto-contenedor{
+    font-size: 1.8em;
+    margin: 20px;
+    margin-top: 30px
+}
+
+div#imagen-contenedor{
+    width: 50%;
+    min-height: 300px;
+    background-color: green;
+    float: right;
+}
+*/
