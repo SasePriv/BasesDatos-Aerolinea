@@ -11,8 +11,8 @@
 /* Menu*/
 
 div#menu{
-  position: absolute;
-    width: 90px;
+    position: absolute;
+    width: 80px;
     height: 100%;
     background-color: #2f3030;
     overflow: hidden;
@@ -20,7 +20,7 @@ div#menu{
 }
 
 div#menu:hover{
-    width: 200px;
+    width: 190px;
 }
 
 div#logo-principal{
@@ -69,6 +69,7 @@ div.contenedor-general{
 
 div.contenedor-general:hover{
     background-color: rgba(140, 140, 140, 0.2);
+    font-size: 1.1em;
 }
 
 div#contenedor-general-primero{
@@ -101,36 +102,9 @@ p.texto{
     line-height: 75px;
     font-family: 'Exo', sans-serif;
     font-weight: 600;
+    text-decoration: none;
 }
 
-/*Body*/
-
-/*
-div#body{
-    position: absolute;
-    right: 0px;
-    left: 190px;
-    min-height: 300px;
-    background-color: red;
+a.vin-link{
+    text-decoration: none;
 }
-
-div#texto-contenedor{
-    width: 50%;
-    min-height: 300px;
-    background-color: grey;
-    float: left;
-}
-
-p#texto-contenedor{
-    font-size: 1.8em;
-    margin: 20px;
-    margin-top: 30px
-}
-
-div#imagen-contenedor{
-    width: 50%;
-    min-height: 300px;
-    background-color: green;
-    float: right;
-}
-*/
