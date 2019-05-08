@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS Ciudad (
  CONSTRAINT departamento
     FOREIGN KEY (id_departamento)
     REFERENCES Departamento (id_departamento)
-)ENGINE = InnoDB;
+)ENGINE = INNODB;
 
 CREATE TABLE IF NOT EXISTS listanegra (
   id_listanegra INT NOT NULL AUTO_INCREMENT,
