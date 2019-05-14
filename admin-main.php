@@ -1,3 +1,6 @@
+<?php
+  session_start();
+?>
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
   <head>
@@ -23,20 +26,16 @@
 
               <table border="0" id="tabla-info">
                   <tr>
-                    <td class="tabla-titulo">Usuario: </td>
-                    <td class="tabla-resul">Ejemplo Luisaleja</td>
+                    <td class="tabla-titulo">Cedula: </td>
+                    <td class="tabla-resul"><?php echo $_SESSION['cedula']; ?></td>
                   </tr>
                   <tr>
                     <td class="tabla-titulo">Nombre: </td>
-                    <td class="tabla-resul">Ejemplo Luis Sanchez</td>
-                  </tr>
-                  <tr>
-                    <td class="tabla-titulo">Cedula: </td>
-                    <td class="tabla-resul">Ejemplo 26781211</td>
+                    <td class="tabla-resul"><?php echo $_SESSION['nombre'] ." ". $_SESSION['apellido']; ?></td>
                   </tr>
                   <tr>
                     <td class="tabla-titulo">Cargo: </td>
-                    <td class="tabla-resul">Ejemplo emepleado</td>
+                    <td class="tabla-resul"><?php echo $_SESSION['cargo']; ?></td>
                   </tr>
               </table>
           </div>

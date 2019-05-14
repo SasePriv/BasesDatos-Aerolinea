@@ -97,6 +97,10 @@ div#logo-vuelos{
     background-image: url("../imagenes/vuelos.png") !important;
 }
 
+div#logo-salir{
+    background-image: url("../imagenes/salir.png") !important;
+}
+
 p.texto{
     margin-left: 95px;
     line-height: 75px;

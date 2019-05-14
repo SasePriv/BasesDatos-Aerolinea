@@ -81,7 +81,7 @@
     margin-top: 10px;
 }
 
-.login input[type=button]{
+.login button[type=submit]{
     width: 260px;
     height: 35px;
     background: #fff;
@@ -96,11 +96,11 @@
     margin-top: 10px;
 }
 
-.login input[type=button]:hover{
+.login button[type=submit]:hover{
     opacity: 0.8;
 }
 
-.login input[type=button]:active{
+.login button[type=submit]:active{
     opacity: 0.6;
 }
 
@@ -114,7 +114,7 @@
     border: 1px solid rgba(255, 255, 255, 0.9);
 }
 
-.login input[type=buton]:focus{
+.login button[type=submit]:focus{
     outline: none;
 }
 
@@ -124,4 +124,10 @@
 
 ::-moz-input-placeholder{
     color: rgba(255, 255, 255, 0.6);
+}
+
+p.error{
+  color: red;
+  font-family: 'Exo', sans-serif;
+  font-size: 1.2em;
 }
