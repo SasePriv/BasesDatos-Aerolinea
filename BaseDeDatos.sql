@@ -567,6 +567,13 @@ ALTER TABLE `departamento`
 ALTER TABLE `estado_vuelo`
   ADD PRIMARY KEY (`id_Estado_Vuelo`);
 
+  INSERT INTO `estado_vuelo` (`id_Estado_Vuelo`, `descripción`) VALUES
+  (1, 'Arribando'),
+  (2, 'Saliendo'),
+  (3, 'Retrasado'),
+  (4, 'Cancelado'),
+  (5, 'En espera');
+
 --
 -- Indices de la tabla `funcionarios`
 --
