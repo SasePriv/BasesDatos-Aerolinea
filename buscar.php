@@ -12,7 +12,7 @@
       <?php
           include "menu-lateral.html"
       ?>
-      <h1 class="h1">Buscar</h1>
+      <h1 class="h1">Buscar2</h1>
 
       <div class="flexsearch">
       		<div class="flexsearch--wrapper">
