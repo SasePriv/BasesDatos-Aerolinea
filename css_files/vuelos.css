@@ -52,6 +52,6 @@ tr#titulo-row td{
 
 }
 
-tr#info td{
+tr.info td{
   color: black;
 }

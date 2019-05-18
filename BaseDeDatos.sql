@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 15-05-2019 a las 00:49:15
+-- Tiempo de generación: 18-05-2019 a las 02:43:58
 -- Versión del servidor: 10.1.36-MariaDB
 -- Versión de PHP: 7.2.10
 
@@ -30,7 +30,6 @@ SET time_zone = "+00:00";
 
 CREATE DATABASE IF NOT EXISTS `based_aerolinea` /*!40100 DEFAULT CHARACTER SET utf8 */;
 USE `based_aerolinea`;
-
 
 CREATE TABLE `avion` (
   `cod_avion` int(11) NOT NULL,
@@ -141,8 +140,19 @@ CREATE TABLE `departamento` (
 
 CREATE TABLE `estado_vuelo` (
   `id_Estado_Vuelo` int(11) NOT NULL,
-  `descripción` varchar(45) NOT NULL
+  `descripcion` varchar(45) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `estado_vuelo`
+--
+
+INSERT INTO `estado_vuelo` (`id_Estado_Vuelo`, `descripcion`) VALUES
+(1, 'Arribando'),
+(2, 'Saliendo'),
+(3, 'Retrasado'),
+(4, 'Cancelado'),
+(5, 'En espera');
 
 -- --------------------------------------------------------
 
@@ -455,6 +465,13 @@ CREATE TABLE `ruta` (
   `ciudad_id_ciudad` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Volcado de datos para la tabla `ruta`
+--
+
+INSERT INTO `ruta` (`cod_ruta`, `valor`, `id_Ciudad`, `ciudad_id_ciudad`) VALUES
+(521, '1', 5, 1);
+
 -- --------------------------------------------------------
 
 --
@@ -509,7 +526,7 @@ CREATE TABLE `vuelos` (
 --
 
 INSERT INTO `vuelos` (`cod_vuelos`, `cod_avion`, `cod_ruta`, `id_Estado_Vuelo`, `fecha_hora`, `avion_id_avion`, `ruta_id_ruta`, `estadov_id_estadov`, `id_ciudad`) VALUES
-(1, NULL, NULL, NULL, '2019-05-20 19:00:00', NULL, NULL, NULL, 2);
+(1, 1, 521, 1, '2019-05-20 19:00:00', NULL, NULL, NULL, 2);
 
 --
 -- Índices para tablas volcadas
@@ -566,13 +583,6 @@ ALTER TABLE `departamento`
 --
 ALTER TABLE `estado_vuelo`
   ADD PRIMARY KEY (`id_Estado_Vuelo`);
-
-  INSERT INTO `estado_vuelo` (`id_Estado_Vuelo`, `descripción`) VALUES
-  (1, 'Arribando'),
-  (2, 'Saliendo'),
-  (3, 'Retrasado'),
-  (4, 'Cancelado'),
-  (5, 'En espera');
 
 --
 -- Indices de la tabla `funcionarios`
@@ -771,7 +781,7 @@ ALTER TABLE `condicion_especiales`
 -- AUTO_INCREMENT de la tabla `estado_vuelo`
 --
 ALTER TABLE `estado_vuelo`
-  MODIFY `id_Estado_Vuelo` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_Estado_Vuelo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `funcionarios`
@@ -861,7 +871,7 @@ ALTER TABLE `puerta_abordaje`
 -- AUTO_INCREMENT de la tabla `ruta`
 --
 ALTER TABLE `ruta`
-  MODIFY `cod_ruta` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `cod_ruta` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=522;
 
 --
 -- AUTO_INCREMENT de la tabla `sanciones`
