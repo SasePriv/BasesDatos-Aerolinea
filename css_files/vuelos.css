@@ -21,7 +21,7 @@ h1#h1-titulo {
 
 div#informacion{
     position: absolute;
-    left: calc(50% - 600px);
+    left: calc(50% - 700px);
     top: calc(50% - 300px);
     min-width: 50%;
     min-height: 100px;

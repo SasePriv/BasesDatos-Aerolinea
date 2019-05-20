@@ -19,64 +19,55 @@
         <table border="0" id="tabla-info">
           <tr id="titulo-row">
             <td>Numero Vuelo</td>
-            <td>Codigo Avion</td>
-            <td>Ruta</td>
+            <td>Modelo Avion</td>
+            <td>Duracion</td>
             <td>Estado Vuelo</td>
+            <td>Destino</td>
             <td>Fecha - Hora</td>
           </tr>
           <?php
             $sql = "SELECT * FROM vuelos;";
             $result = mysqli_query($conn, $sql);
-            /*$resultCheck = mysqli_num_rows($result);*/
 
+            while ($row = mysqli_fetch_assoc($result)) {
+              $numVuelo = $row['cod_vuelos'];
+              $aviontemp = $row['avion_id_avion'];
+              $rutatemp = $row['ruta_id_ruta'];
+              $estadotemp = $row['estadov_id_estadov'];
+              $destinotemp = $row['id_ciudad'];
+              $fechaHora = $row['fecha_hora'];
 
-            /*if($resultCheck > 0){*/
-              while ($row = mysqli_fetch_assoc($result)) {
-                $numVuelo = $row['cod_vuelos'];
-                $codigoAvion = $row['cod_avion'];
-                $rutatemp = $row['cod_ruta'];
-                $estadotemp = $row['id_Estado_Vuelo'];
-                $fechaHora = $row['fecha_hora'];
+              //Tabala modelo
+              $sql2 =   "SELECT nom_modelo FROM modelo where id_modelo = $aviontemp;";
+              $result2 = mysqli_query($conn, $sql2);
+              $row2 = mysqli_fetch_assoc($result2);
+              $modelo = $row2['nom_modelo'];
+              //Tabala ruta
+              $sql2 =   "SELECT valor FROM ruta where cod_ruta = $rutatemp;";
+              $result2 = mysqli_query($conn, $sql2);
+              $row2 = mysqli_fetch_assoc($result2);
+              $duracion = $row2['valor'];
+              //Tabla estado_vuelo
+              $sql2 =   "SELECT descripcion FROM estado_vuelo where id_Estado_Vuelo = $estadotemp;";
+              $result2 = mysqli_query($conn, $sql2);
+              $row2 = mysqli_fetch_assoc($result2);
+              $estadoVuelo = $row2['descripcion'];
+              //Tabla Ciudad
+              $sql2 =   "SELECT Ciudad FROM ciudad where id_ciudad = $destinotemp;";
+              $result2 = mysqli_query($conn, $sql2);
+              $row2 = mysqli_fetch_assoc($result2);
+              $ciudad = $row2['Ciudad'];
 
-                $sql2 = "SELECT id_Ciudad FROM ruta WHERE cod_ruta = $rutatemp;";
-                $result2 = mysqli_query($conn, $sql2);
-                /*$resultCheck = mysqli_num_rows($result);*/
+              echo "<tr class='info'>
+                      <td>". $numVuelo . "</td>
+                      <td>". $modelo ."</td>
+                      <td>". $duracion ."</td>
+                      <td>". $estadoVuelo ."</td>
+                      <td>". $ciudad ."</td>
+                      <td>". $fechaHora ."</td>
+                    </tr>";
 
-                /*if ($resultCheck > 0) {*/
-                  $row2 = mysqli_fetch_assoc($result2);
-                  $ruta = $row2['id_Ciudad'];
-
-                  $sql2 = "SELECT Ciudad FROM ciudad WHERE id_ciudad = $ruta;";
-                  $result2 = mysqli_query($conn, $sql2);
-                  $row2 = mysqli_fetch_assoc($result2);
-
-                  $ciudad = $row2['Ciudad'];
-
-                  $sql2 = "SELECT descripcion FROM estado_vuelo WHERE id_Estado_Vuelo = $estadotemp;";
-                  $result2 = mysqli_query($conn, $sql2);
-                  /*$resultCheck = mysqli_num_rows($result);*/
-
-                  /*if ($resultCheck > 0) {*/
-                    $row2 = mysqli_fetch_assoc($result2);
-                    $estadoVuelo = $row2['descripcion'];
-
-
-                    echo "<tr class='info'>
-                            <td>". $numVuelo . "</td>
-                            <td>". $codigoAvion ."</td>
-                            <td>". $ciudad ."</td>
-                            <td>". $estadoVuelo ."</td>
-                            <td>". $fechaHora ."</td>
-                          </tr>";
-                  /*}*/
-
-
-                /*}*/
-
-
-              }
-            /*}*/
-
+            }
           ?>
         </table>
       </div>
