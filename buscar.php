@@ -18,7 +18,7 @@
       		<div class="flexsearch--wrapper">
       			<form class="flexsearch--form" action="buscar.php" method="post">
       				<div class="flexsearch--input-wrapper">
-      					<input class="flexsearch--input" name="buscar" type="search" placeholder="Buscar">
+      					<input class="flexsearch--input" name="buscar" type="search" placeholder="Introduzca una cedula">
       				</div>
       				<input class="flexsearch--submit" type="submit" name="submit-buscar" value="&#10140;"/>
       			</form>

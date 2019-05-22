@@ -39,10 +39,10 @@
 .grad{
     background: rgba(0,0,0,0.7);
     position: relative;
-    width: 30%;
-    height: 30%;
-    top: calc(50% - 190px);
-    left: calc(50% - 240px);
+    width: 50%;
+    height: 40%;
+    top: calc(50% - 245px);
+    left: calc(50% - 440px);
 }
 
 .login{
