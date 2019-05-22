@@ -386,12 +386,12 @@ CREATE TABLE IF NOT EXISTS `precio` (
 
 CREATE TABLE IF NOT EXISTS `profesion` (
   `id_profesion` int(11) NOT NULL AUTO_INCREMENT,
-  `descripción` varchar(100) DEFAULT NULL,
+  `descripcion` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id_profesion`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 /*!40000 ALTER TABLE `profesion` DISABLE KEYS */;
-REPLACE INTO `profesion` (`id_profesion`, `descripción`) VALUES
+REPLACE INTO `profesion` (`id_profesion`, `descripcion`) VALUES
 	(1, 'INGENIERO'),
 	(2, 'CONTADOR'),
 	(3, 'ABOGADO'),

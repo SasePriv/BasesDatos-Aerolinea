@@ -31,7 +31,7 @@
  * Configurable Styles *
  ***********************/
 .flexsearch {
-  padding: 0 200px 0 200px; /* Padding for other horizontal elements */
+  padding: 0 80px 0 200px; /* Padding for other horizontal elements */
 }
 
 .flexsearch--input {
@@ -113,4 +113,52 @@ body#body1{
     height: 100%;
     background-image: url("../imagenes/cielo.jpg");
     background-size: cover;
+}
+
+
+div#informacion{
+    position: absolute;
+    left: calc(50% - 725px);
+    top: calc(50% - 200px);
+    min-width: 50%;
+    min-height: 100px;
+    /*border: 10px solid rgba(255, 255, 255, 0.6);*/
+    background-color: rgba(255, 255, 255, 0.3);
+
+}
+
+div#informacion td{
+  font-family: 'Exo', sans-serif;
+}
+
+table#tabla-info{
+  font-size: 1.6em;
+  width: 100%;
+}
+
+table#tabla-info td{
+
+  border: 5px solid rgba(255, 255, 255, 0.6);
+  min-width: 250px;
+}
+
+tr#titulo-row td{
+  color: black;
+  font-size: 1.1em;
+  font-weight: bold;
+
+}
+
+tr.info td{
+  color: black;
+}
+
+p.not{
+	position: absolute;
+	left: calc(50% - 45px);
+	top: calc(50% - 200px);
+	font-family: 'Helvetica', sans-serif;
+	font-weight: bold;
+	color: black;
+	font-size: 1.3em;
 }
